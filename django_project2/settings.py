@@ -144,12 +144,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'awangharrisonnj@gmail.com'
-EMAIL_HOST_PASSWORD = 'nllcqihjzgdbyvbx'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
-AWS_ACCESS_KEY_ID = 'AKIA4TFIDMCG6KM32L6S'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'djangofilestest'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_S3_REGION_NAME = 'us-east-1'
